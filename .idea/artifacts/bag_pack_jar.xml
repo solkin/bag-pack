@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="bag-pack:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/bag_pack_jar</output-path>
+    <root id="archive" name="bag-pack.jar">
+      <element id="module-output" name="bag-pack" />
+    </root>
+  </artifact>
+</component>
