@@ -128,14 +128,14 @@ public class PackDialog extends JDialog {
 
     private void onOK() {
         dispose();
-        ProgressDialog progressDialog = new ProgressDialog();
+        final ProgressDialog progressDialog = new ProgressDialog();
         progressDialog.setSize(480, 120);
         progressDialog.setLocationRelativeTo(this);
         progressDialog.setVisible(true);
-        String bagFilePath = bagField.getText();
-        String directoryPath = directoryField.getText();
-        String[] exclude = excludeField.getText().split(",");
-        boolean open = openAfterCreateCheckBox.isSelected();
+        final String bagFilePath = bagField.getText();
+        final String directoryPath = directoryField.getText();
+        final String[] exclude = excludeField.getText().split(",");
+        final boolean open = openAfterCreateCheckBox.isSelected();
         new Thread() {
             @Override
             public void run() {
@@ -157,7 +157,7 @@ public class PackDialog extends JDialog {
                 try {
                     bag.pack(directoryPath, files, new Bag.BagProgressCallback() {
                         @Override
-                        public void onProgress(int percent) {
+                        public void onProgress(final int percent) {
                             SwingUtilities.invokeLater(new Runnable() {
                                 @Override
                                 public void run() {

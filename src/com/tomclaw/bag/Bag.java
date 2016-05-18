@@ -9,14 +9,16 @@ import java.util.List;
  */
 public class Bag {
 
-    private static final int BUFFER_SIZE = 10240;
+    private static final int BUFFER_SIZE = 102400;
 
     private final byte[] buffer;
     private final File bagFile;
+    private final Node node;
 
     public Bag(String path) {
         buffer = new byte[BUFFER_SIZE];
         bagFile = new File(path);
+        node = new Node();
     }
 
     public void pack(String rootPath, List<File> files, BagProgressCallback callback) throws IOException {
@@ -54,7 +56,6 @@ public class Bag {
                         }
                     }
                 }
-                // System.out.println("~> " + deltaFile.getAbsolutePath() + " (" + length + " bytes)");
                 count++;
                 size += length;
                 callback.onProgress(count * 100 / files.size());
@@ -71,41 +72,57 @@ public class Bag {
     }
 
     public Node scan() throws IOException {
-        Node node = new Node("/", -1);
-
+        node.clear();
         read(new BagCallback() {
+
             @Override
-            public void onFile(String path, long length, long size, InputStream stream) throws IOException {
+            public boolean onFile(String path, long length, long read, long total, InputStream stream) throws IOException {
                 skipStream(length, stream);
-                node.add(path, length);
+                node.add(path, length, read);
+                return false;
             }
         });
         return node;
     }
 
-    public void unpack(final String output, BagProgressCallback callback) throws IOException {
+    public void unpack(Node node, final UnpackCallback callback) throws IOException {
+        long descriptor = node.getDescriptor();
+        if (descriptor >= 0) {
+            System.out.println("descriptor: " + descriptor);
+            InputStream inputStream = new FileInputStream(bagFile);
+            skipStream(descriptor, inputStream);
+            read(inputStream, new BagCallback() {
+                @Override
+                public boolean onFile(String path, long length, long read, long total, InputStream stream) throws IOException {
+                    callback.onFile(path, length, stream);
+                    return true;
+                }
+            });
+        }
+    }
+
+    public void unpack(final String output, final BagProgressCallback callback) throws IOException {
         read(new BagCallback() {
 
-            long total = 0;
-
             @Override
-            public void onFile(String path, long length, long size, InputStream stream) throws IOException {
+            public boolean onFile(String path, long length, long read, long total, InputStream stream) throws IOException {
                 Bag.this.saveFile(new File(output, path), length, stream);
-                total += length;
-                callback.onProgress((int) (total * 100 / size));
+                callback.onProgress((int) (read * 100 / total));
+                return false;
             }
         });
     }
 
-    public void unpack(final String name, UnpackCallback callback) throws IOException {
+    public void unpack(final String name, final UnpackCallback callback) throws IOException {
         read(new BagCallback() {
             @Override
-            public void onFile(String path, long length, long size, InputStream stream) throws IOException {
+            public boolean onFile(String path, long length, long read, long total, InputStream stream) throws IOException {
                 if (FilesHelper.getFileName(path).equals(name)) {
                     callback.onFile(path, length, stream);
                 } else {
                     skipStream(length, stream);
                 }
+                return false;
             }
         });
     }
@@ -113,29 +130,40 @@ public class Bag {
     public void unpack(final String output, final String name) throws IOException {
         read(new BagCallback() {
             @Override
-            public void onFile(String path, long length, long size, InputStream stream) throws IOException {
+            public boolean onFile(String path, long length, long read, long total, InputStream stream) throws IOException {
                 File file = new File(output, path);
                 if (file.getName().equalsIgnoreCase(name)) {
                     Bag.this.saveFile(new File(output, path), length, stream);
                 } else {
                     skipStream(length, stream);
                 }
+                return false;
             }
         });
     }
 
     private void read(BagCallback callback) throws IOException {
+        read(new FileInputStream(bagFile), callback);
+    }
+
+    private void read(InputStream inputStream, BagCallback callback) throws IOException {
         DataInputStream stream = null;
         try {
-            stream = new DataInputStream(new FileInputStream(bagFile));
-            long size = bagFile.length();
+            stream = new DataInputStream(new BufferedInputStream(inputStream));
+            long read = 0;
+            long total = bagFile.length();
             boolean eof = false;
             do {
                 try {
+                    stream.mark(2);
+                    short pathLength = stream.readShort();
+                    stream.reset();
                     String path = stream.readUTF();
                     long length = stream.readLong();
-                    // System.out.println("<~ " + path + " (" + length + " bytes)");
-                    callback.onFile(path, length, size, new LimitedInputStream(stream, length));
+                    if (callback.onFile(path, length, read, total, new LimitedInputStream(stream, length))) {
+                        eof = true;
+                    }
+                    read += 2 + pathLength + 8 + length;
                 } catch (EOFException ex) {
                     eof = true;
                 }
@@ -187,10 +215,10 @@ public class Bag {
 
     private interface BagCallback {
 
-        void onFile(String path, long length, long size, InputStream stream) throws IOException;
+        boolean onFile(String path, long length, long read, long total, InputStream stream) throws IOException;
     }
 
-    private interface UnpackCallback {
+    public interface UnpackCallback {
 
         void onFile(String path, long length, InputStream stream) throws IOException;
     }
