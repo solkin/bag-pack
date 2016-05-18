@@ -1,5 +1,7 @@
 package com.tomclaw.bag;
 
+import com.alee.extended.breadcrumb.WebBreadcrumb;
+import com.alee.extended.breadcrumb.WebBreadcrumbButton;
 import com.alee.extended.layout.ToolbarLayout;
 import com.alee.extended.list.FileListModel;
 import com.alee.extended.list.FileListViewType;
@@ -7,10 +9,15 @@ import com.alee.extended.list.WebFileList;
 import com.alee.extended.statusbar.WebMemoryBar;
 import com.alee.extended.statusbar.WebStatusBar;
 import com.alee.global.StyleConstants;
+import com.alee.laf.WebLookAndFeel;
 import com.alee.laf.button.WebButton;
+import com.alee.laf.menu.WebMenuItem;
+import com.alee.laf.menu.WebPopupMenu;
 import com.alee.laf.toolbar.ToolbarStyle;
 import com.alee.laf.toolbar.WebToolBar;
 import com.alee.laf.tree.WebTreeCellRenderer;
+import com.alee.managers.hotkey.Hotkey;
+import com.alee.managers.style.skin.web.PopupStyle;
 import com.alee.utils.file.FileComparator;
 
 import javax.swing.*;
@@ -39,7 +46,9 @@ public class MainForm {
     private JScrollPane contentScrollPane;
     private JPanel statusBarHolder;
     private JPanel toolbarHolder;
+    private JPanel breadcumbHolder;
     private WebFileList webFileList;
+    private WebBreadcrumb breadcrumb;
 
     private static final boolean showFilesInTree = false;
 
@@ -64,7 +73,7 @@ public class MainForm {
     }
 
     private void initUi() {
-        DefaultMutableTreeNode root = new DefaultMutableTreeNode("<empty>", true);
+        DefaultMutableTreeNode root = new DefaultMutableTreeNode("/", true);
         TreeModel treeModel = new DefaultTreeModel(root);
 
         Icon leafIcon = loadIcon("opened_folder.png");
@@ -88,9 +97,7 @@ public class MainForm {
                     String name = e.getPath().getPathComponent(c).toString();
                     node = node.get(name);
                 }
-                selectedNode = node;
-                FileListModel model = list(node);
-                webFileList.setModel(model);
+                updateSelectedNode(node);
             }
         });
 
@@ -104,16 +111,44 @@ public class MainForm {
             @Override
             @SuppressWarnings("unchecked")
             public void mouseClicked(MouseEvent e) {
-                if (e.getClickCount() == 2) {
+                if (e.getClickCount() == 1 && e.getButton() == MouseEvent.BUTTON3) {
+                    int index = webFileList.locationToIndex(e.getPoint());
+                    if (index >= 0) {
+                        File selectedFile = webFileList.getSelectedFile();
+                        if (selectedFile.isDirectory()) {
+                            final Node node = selectedNode.get(selectedFile.getName());
+
+                            final WebPopupMenu popupMenu = new WebPopupMenu ();
+                            popupMenu.setPopupStyle(PopupStyle.simple);
+
+                            WebMenuItem unpackItem = new WebMenuItem( "Unpack", loadIcon("unpack.png"), Hotkey.ALT_U );
+                            unpackItem.addActionListener(new ActionListener() {
+                                @Override
+                                public void actionPerformed(ActionEvent e) {
+                                    unpack(node);
+                                }
+                            });
+                            WebMenuItem deleteItem = new WebMenuItem ( "Delete", loadIcon("delete.png"), Hotkey.DELETE );
+                            deleteItem.addActionListener(new ActionListener() {
+                                @Override
+                                public void actionPerformed(ActionEvent e) {
+
+                                }
+                            });
+
+                            popupMenu.add ( unpackItem );
+                            popupMenu.addSeparator ();
+                            popupMenu.add ( deleteItem );
+                            popupMenu.show(webFileList, e.getX(), e.getY());
+                        }
+                    }
+                } else if (e.getClickCount() == 2 && e.getButton() == MouseEvent.BUTTON1) {
                     int index = webFileList.locationToIndex(e.getPoint());
                     if (index >= 0) {
                         File selectedFile = webFileList.getSelectedFile();
                         if (selectedFile.isDirectory()) {
                             Node node = selectedNode.get(selectedFile.getName());
-                            selectedNode = node;
-
-                            FileListModel model = list(node);
-                            webFileList.setModel(model);
+                            updateSelectedNode(node);
                         }
                     }
                 }
@@ -122,50 +157,74 @@ public class MainForm {
 
         contentScrollPane.setViewportView(webFileList);
 
-        WebStatusBar statusBar = new WebStatusBar ();
+        WebStatusBar statusBar = new WebStatusBar();
 
         // Simple memory bar
-        WebMemoryBar memoryBar = new WebMemoryBar ();
-        memoryBar.setPreferredWidth ( memoryBar.getPreferredSize ().width + 20 );
-        statusBar.add ( memoryBar, ToolbarLayout.END );
+        WebMemoryBar memoryBar = new WebMemoryBar();
+        memoryBar.setPreferredWidth(memoryBar.getPreferredSize().width + 20);
+        statusBar.add(memoryBar, ToolbarLayout.END);
 
         statusBarHolder.add(statusBar);
 
-        WebToolBar ut = new WebToolBar ( WebToolBar.HORIZONTAL );
-        ut.setFloatable ( false );
+        WebToolBar ut = new WebToolBar(WebToolBar.HORIZONTAL);
+        ut.setFloatable(false);
         ut.setToolbarStyle(ToolbarStyle.attached);
-        setupToolBar ( ut );
+        setupToolBar(ut);
         toolbarHolder.add(ut);
+
+        breadcrumb = new WebBreadcrumb(true);
+        fillBreadcrumb();
+        breadcumbHolder.add(breadcrumb);
+    }
+
+    private void fillBreadcrumb() {
+        breadcrumb.removeAll();
+        if (selectedNode != null) {
+            Node node = selectedNode;
+            do {
+                final Node actionNode = node;
+                WebBreadcrumbButton button = new WebBreadcrumbButton(node.getName());
+                button.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        updateSelectedNode(actionNode);
+                    }
+                });
+                breadcrumb.add(button, 0);
+            } while ((node = node.getParent()) != null);
+        } else {
+            breadcrumb.add(new WebBreadcrumbButton("/"));
+        }
     }
 
     private void setupToolBar(WebToolBar toolbar) {
-        WebButton createButton = WebButton.createIconWebButton ( loadIcon ( "create.png" ), StyleConstants.smallRound, true );
+        WebButton createButton = WebButton.createIconWebButton(loadIcon("create.png"), StyleConstants.smallRound, true);
         createButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 onPackPressed();
             }
         });
-        WebButton scanButton = WebButton.createIconWebButton ( loadIcon ( "scan.png" ), StyleConstants.smallRound, true );
+        WebButton scanButton = WebButton.createIconWebButton(loadIcon("scan.png"), StyleConstants.smallRound, true);
         scanButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 onScanPressed();
             }
         });
-        WebButton unpackButton = WebButton.createIconWebButton ( loadIcon ( "unpack.png" ), StyleConstants.smallRound, true );
+        WebButton unpackButton = WebButton.createIconWebButton(loadIcon("unpack.png"), StyleConstants.smallRound, true);
         unpackButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 onUnpackPressed();
             }
         });
-        toolbar.add ( createButton );
-        toolbar.add ( scanButton );
-        toolbar.add ( unpackButton );
-        toolbar.addSeparator ();
-        toolbar.add ( WebButton.createIconWebButton ( loadIcon ( "append.png" ), StyleConstants.smallRound, true ) );
-        toolbar.add ( WebButton.createIconWebButton ( loadIcon ( "delete.png" ), StyleConstants.smallRound, true ) );
+        toolbar.add(createButton);
+        toolbar.add(scanButton);
+        toolbar.add(unpackButton);
+        toolbar.addSeparator();
+        toolbar.add(WebButton.createIconWebButton(loadIcon("append.png"), StyleConstants.smallRound, true));
+        toolbar.add(WebButton.createIconWebButton(loadIcon("delete.png"), StyleConstants.smallRound, true));
     }
 
     private void onPackPressed() {
@@ -198,45 +257,7 @@ public class MainForm {
     }
 
     private void onUnpackPressed() {
-        JFileChooser chooser = new JFileChooser();
-        chooser.setDialogTitle("Choose directory to unpack");
-        chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-        chooser.setAcceptAllFileFilterUsed(false);
-//                if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
-//                    File selectedFile = chooser.getSelectedFile();
-//                    final File directory = new File(selectedFile.getAbsolutePath(), FilesHelper.getFileBaseFromName(bag.getName()));
-//                    directory.mkdirs();
-//                    final ProgressDialog progressDialog = new ProgressDialog();
-//                    progressDialog.setSize(480, 120);
-//                    progressDialog.setLocationRelativeTo(frame);
-//                    progressDialog.setVisible(true);
-//                    new Thread() {
-//                        @Override
-//                        public void run() {
-//                            try {
-//                                bag.unpack(directory.getAbsolutePath(), new Bag.BagProgressCallback() {
-//                                    @Override
-//                                    public void onProgress(final int percent) {
-//                                        SwingUtilities.invokeLater(new Runnable() {
-//                                            @Override
-//                                            public void run() {
-//                                                progressDialog.setProgress(percent);
-//                                            }
-//                                        });
-//                                    }
-//                                });
-//                                SwingUtilities.invokeLater(new Runnable() {
-//                                    @Override
-//                                    public void run() {
-//                                        progressDialog.dispose();
-//                                    }
-//                                });
-//                            } catch (IOException ex) {
-//                                ex.printStackTrace();
-//                            }
-//                        }
-//                    }.start();
-//                }
+        unpack(tree);
     }
 
     private ImageIcon loadIcon(String s) {
@@ -272,11 +293,18 @@ public class MainForm {
 
         walk(tree, root);
 
-        selectedNode = tree;
-        FileListModel tableModel = list(tree);
-
-        webFileList.setModel(tableModel);
         tree1.setModel(treeModel);
+
+        updateSelectedNode(tree);
+    }
+
+    private void updateSelectedNode(Node node) {
+        selectedNode = node;
+
+        fillBreadcrumb();
+
+        FileListModel model = list(node);
+        webFileList.setModel(model);
     }
 
     private void walk(Node tree, DefaultMutableTreeNode root) {
@@ -302,5 +330,51 @@ public class MainForm {
 
         Arrays.sort(files, new FileComparator());
         return new FileListModel(files);
+    }
+
+    private void unpack(final Node node) {
+        JFileChooser chooser = new JFileChooser();
+        chooser.setDialogTitle("Choose directory to unpack");
+        chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        chooser.setAcceptAllFileFilterUsed(false);
+        if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = chooser.getSelectedFile();
+            final File directory = new File(selectedFile.getAbsolutePath());
+            directory.mkdirs();
+            final ProgressDialog progressDialog = new ProgressDialog();
+            progressDialog.setSize(480, 120);
+            progressDialog.setLocationRelativeTo(frame);
+            progressDialog.setVisible(true);
+            new Thread() {
+                @Override
+                public void run() {
+                    final String unpackPath = directory.getAbsolutePath();
+                    node.walk(new Node.WalkCallback() {
+                        @Override
+                        public void onNode(String path, Node node) {
+                            File dir = new File(unpackPath, path);
+                            dir.mkdirs();
+                            try {
+                                Node.saveFile(new File(dir, node.getName()), node.getInputStream());
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+//                                SwingUtilities.invokeLater(new Runnable() {
+//                                    @Override
+//                                    public void run() {
+//                                        progressDialog.setProgress(percent);
+//                                    }
+//                                });
+                        }
+                    });
+                    SwingUtilities.invokeLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            progressDialog.dispose();
+                        }
+                    });
+                }
+            }.start();
+        }
     }
 }

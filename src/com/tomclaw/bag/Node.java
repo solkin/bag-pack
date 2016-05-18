@@ -105,7 +105,7 @@ public class Node extends HashMap<String, Node> {
         walk(PATH_SEPARATOR, callback);
     }
 
-    public void walk(String path, WalkCallback callback) {
+    private void walk(String path, WalkCallback callback) {
         if (isEmpty()) {
             callback.onNode(path, this);
         } else {
@@ -119,7 +119,7 @@ public class Node extends HashMap<String, Node> {
     public InputStream getInputStream() throws IOException {
         InputStream inputStream = new FileInputStream(file);
         skipStream(descriptor, inputStream);
-        DataInputStream stream = new DataInputStream(inputStream);
+        DataInputStream stream = new DataInputStream(new BufferedInputStream(inputStream));
         BagFile bagFile = readBagFile(stream);
         return bagFile.getStream();
     }
@@ -127,7 +127,7 @@ public class Node extends HashMap<String, Node> {
     public static Node scan(File file) throws IOException {
         final Node node = new Node();
         node.setFile(file);
-        node.setName(file.getName());
+        node.setName(FilesHelper.getFileBaseFromName(file.getName()));
         read(new FileInputStream(file), new BagCallback() {
 
             @Override
