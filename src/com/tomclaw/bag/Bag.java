@@ -22,40 +22,48 @@ public class Bag {
     }
 
     public void pack(String rootPath, List<File> files, BagProgressCallback callback) throws IOException {
+        pack(rootPath, files, false, callback);
+    }
+
+    public void write(DataOutputStream output, String path, long length, InputStream input) throws IOException {
+        output.writeUTF(path);
+        output.writeLong(length);
+        InputStream inputStream = null;
+        try {
+            inputStream = new LimitedInputStream(input, length);
+            int read;
+            while ((read = inputStream.read(buffer)) != -1) {
+                output.write(buffer, 0, read);
+            }
+        } catch (Throwable ex) {
+            System.out.println(path);
+            throw ex;
+        } finally {
+            if (inputStream != null) {
+                try {
+                    inputStream.close();
+                } catch (IOException ignored) {
+                }
+            }
+        }
+    }
+
+    public void pack(String rootPath, List<File> files, boolean append, BagProgressCallback callback) throws IOException {
         DataOutputStream stream = null;
         int count = 0;
         long size = 0;
         try {
             File outputDir = bagFile.getParentFile();
             outputDir.mkdirs();
-            if (bagFile.exists()) {
+            if (!append && bagFile.exists()) {
                 bagFile.delete();
             }
-            stream = new DataOutputStream(new FileOutputStream(bagFile));
+            stream = new DataOutputStream(new FileOutputStream(bagFile, append));
             for (File file : files) {
                 String pathDelta = file.getParent().substring(rootPath.length());
                 File deltaFile = new File(pathDelta, file.getName());
                 long length = file.length();
-                stream.writeUTF(deltaFile.getAbsolutePath());
-                stream.writeLong(length);
-                InputStream inputStream = null;
-                try {
-                    inputStream = new LimitedInputStream(new FileInputStream(file), length);
-                    int read;
-                    while ((read = inputStream.read(buffer)) != -1) {
-                        stream.write(buffer, 0, read);
-                    }
-                } catch (Throwable ex) {
-                    System.out.println(file.getName());
-                    throw ex;
-                } finally {
-                    if (inputStream != null) {
-                        try {
-                            inputStream.close();
-                        } catch (IOException ignored) {
-                        }
-                    }
-                }
+                write(stream, deltaFile.getAbsolutePath(), length, new FileInputStream(file));
                 count++;
                 size += length;
                 callback.onProgress(count * 100 / files.size());
@@ -211,6 +219,10 @@ public class Bag {
 
     public String getName() {
         return bagFile.getName();
+    }
+
+    public File getBagFile() {
+        return bagFile;
     }
 
     private interface BagCallback {

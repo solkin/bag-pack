@@ -53,7 +53,7 @@ public class PackDialog extends JDialog {
             }
         });
 
-// call onCancel() when cross is clicked
+        // call onCancel() when cross is clicked
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
@@ -61,7 +61,7 @@ public class PackDialog extends JDialog {
             }
         });
 
-// call onCancel() on ESCAPE
+        // call onCancel() on ESCAPE
         contentPane.registerKeyboardAction(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 onCancel();
@@ -70,13 +70,6 @@ public class PackDialog extends JDialog {
     }
 
     private void onChooseDirectory() {
-//        JFileChooser chooser = new JFileChooser();
-//        chooser.setDialogTitle("Choose directory to pack");
-//        chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-//        chooser.setAcceptAllFileFilterUsed(false);
-//        if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
-//            directoryField.setText(chooser.getSelectedFile().getAbsolutePath());
-//        }
         WebDirectoryChooser directoryChooser = new WebDirectoryChooser(getOwner(), "Choose any directory");
         directoryChooser.setVisible(true);
 
@@ -87,25 +80,6 @@ public class PackDialog extends JDialog {
     }
 
     private void onChooseBag() {
-//        JFileChooser chooser = new JFileChooser();
-//        chooser.setDialogTitle("Choose bag");
-//        chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
-//        chooser.setFileFilter(new FileFilter() {
-//            @Override
-//            public boolean accept(File f) {
-//                return FilesHelper.getFileExtension(f.getName()).equals("bag");
-//            }
-//
-//            @Override
-//            public String getDescription() {
-//                return "Bags (*.bag)";
-//            }
-//        });
-//        chooser.setAcceptAllFileFilterUsed(false);
-//        if (chooser.showSaveDialog(null) == JFileChooser.APPROVE_OPTION) {
-//            bagField.setText(chooser.getSelectedFile().getAbsolutePath() + ".bag");
-//        }
-
         WebFileChooser bagChooser = new WebFileChooser();
         bagChooser.setMultiSelectionEnabled(false);
         bagChooser.setAcceptAllFileFilterUsed(false);

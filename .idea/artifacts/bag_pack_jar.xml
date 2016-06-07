@@ -3,6 +3,7 @@
     <output-path>$PROJECT_DIR$/out/artifacts/bag_pack_jar</output-path>
     <root id="archive" name="bag-pack.jar">
       <element id="module-output" name="bag-pack" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/weblaf-complete-1.28.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

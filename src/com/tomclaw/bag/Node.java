@@ -61,6 +61,10 @@ public class Node extends HashMap<String, Node> {
         return descriptor;
     }
 
+    private void moveDescriptor(long delta) {
+        descriptor += delta;
+    }
+
     public void setParent(Node parent) {
         this.parent = parent;
     }
@@ -112,6 +116,53 @@ public class Node extends HashMap<String, Node> {
             path += getName() + PATH_SEPARATOR;
             for (Node node : values()) {
                 node.walk(path, callback);
+            }
+        }
+    }
+
+    public void delete() throws IOException {
+        DataInputStream stream = null;
+        RandomAccessFile raf = null;
+        try {
+            InputStream inputStream = new FileInputStream(file);
+            skipStream(descriptor, inputStream);
+            stream = new DataInputStream(new BufferedInputStream(inputStream));
+            BagFile bagFile = readBagFile(stream);
+            skipStream(length, stream);
+
+            raf = new RandomAccessFile(file, "rw");
+            raf.seek(descriptor);
+            long appended = 0;
+            int read;
+            while ((read = stream.read(buffer)) != -1) {
+                raf.write(buffer, 0, read);
+                appended += read;
+            }
+            raf.getChannel().truncate(descriptor + appended);
+            raf.close();
+
+            parent.remove(getName());
+            final long delta = bagFile.getInternal();
+            parent.walk(new WalkCallback() {
+                @Override
+                public void onNode(String path, Node node) {
+                    if (node.getDescriptor() > descriptor) {
+                        node.moveDescriptor(-delta);
+                    }
+                }
+            });
+        } finally {
+            if (stream != null) {
+                try {
+                    stream.close();
+                } catch (IOException ignored) {
+                }
+            }
+            if (raf != null) {
+                try {
+                    raf.close();
+                } catch (IOException ignored) {
+                }
             }
         }
     }

@@ -2,6 +2,7 @@ package com.tomclaw.bag;
 
 import com.alee.extended.breadcrumb.WebBreadcrumb;
 import com.alee.extended.breadcrumb.WebBreadcrumbButton;
+import com.alee.extended.filechooser.WebDirectoryChooser;
 import com.alee.extended.layout.ToolbarLayout;
 import com.alee.extended.list.FileListModel;
 import com.alee.extended.list.FileListViewType;
@@ -19,6 +20,7 @@ import com.alee.laf.tree.WebTreeCellRenderer;
 import com.alee.managers.hotkey.Hotkey;
 import com.alee.managers.style.skin.web.PopupStyle;
 import com.alee.utils.file.FileComparator;
+import com.alee.utils.swing.DialogOptions;
 
 import javax.swing.*;
 import javax.swing.event.TreeSelectionEvent;
@@ -115,32 +117,30 @@ public class MainForm {
                     int index = webFileList.locationToIndex(e.getPoint());
                     if (index >= 0) {
                         File selectedFile = webFileList.getSelectedFile();
-                        if (selectedFile.isDirectory()) {
-                            final Node node = selectedNode.get(selectedFile.getName());
+                        final Node node = selectedNode.get(selectedFile.getName());
 
-                            final WebPopupMenu popupMenu = new WebPopupMenu ();
-                            popupMenu.setPopupStyle(PopupStyle.simple);
+                        final WebPopupMenu popupMenu = new WebPopupMenu ();
+                        popupMenu.setPopupStyle(PopupStyle.simple);
 
-                            WebMenuItem unpackItem = new WebMenuItem( "Unpack", loadIcon("unpack.png"), Hotkey.ALT_U );
-                            unpackItem.addActionListener(new ActionListener() {
-                                @Override
-                                public void actionPerformed(ActionEvent e) {
-                                    unpack(node);
-                                }
-                            });
-                            WebMenuItem deleteItem = new WebMenuItem ( "Delete", loadIcon("delete.png"), Hotkey.DELETE );
-                            deleteItem.addActionListener(new ActionListener() {
-                                @Override
-                                public void actionPerformed(ActionEvent e) {
+                        WebMenuItem unpackItem = new WebMenuItem( "Unpack", loadIcon("unpack.png"), Hotkey.ALT_U );
+                        unpackItem.addActionListener(new ActionListener() {
+                            @Override
+                            public void actionPerformed(ActionEvent e) {
+                                unpack(node);
+                            }
+                        });
+                        WebMenuItem deleteItem = new WebMenuItem ( "Delete", loadIcon("delete.png"), Hotkey.DELETE );
+                        deleteItem.addActionListener(new ActionListener() {
+                            @Override
+                            public void actionPerformed(ActionEvent e) {
+                                delete(node);
+                            }
+                        });
 
-                                }
-                            });
-
-                            popupMenu.add ( unpackItem );
-                            popupMenu.addSeparator ();
-                            popupMenu.add ( deleteItem );
-                            popupMenu.show(webFileList, e.getX(), e.getY());
-                        }
+                        popupMenu.add ( unpackItem );
+                        popupMenu.addSeparator ();
+                        popupMenu.add ( deleteItem );
+                        popupMenu.show(webFileList, e.getX(), e.getY());
                     }
                 } else if (e.getClickCount() == 2 && e.getButton() == MouseEvent.BUTTON1) {
                     int index = webFileList.locationToIndex(e.getPoint());
@@ -159,7 +159,6 @@ public class MainForm {
 
         WebStatusBar statusBar = new WebStatusBar();
 
-        // Simple memory bar
         WebMemoryBar memoryBar = new WebMemoryBar();
         memoryBar.setPreferredWidth(memoryBar.getPreferredSize().width + 20);
         statusBar.add(memoryBar, ToolbarLayout.END);
@@ -219,9 +218,26 @@ public class MainForm {
                 onUnpackPressed();
             }
         });
+        WebButton splitButton = WebButton.createIconWebButton(loadIcon("split.png"), StyleConstants.smallRound, true);
+        splitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                onSplitPressed();
+            }
+        });
+        WebButton mergeButton = WebButton.createIconWebButton(loadIcon("merge.png"), StyleConstants.smallRound, true);
+        mergeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                onMergePressed();
+            }
+        });
         toolbar.add(createButton);
         toolbar.add(scanButton);
         toolbar.add(unpackButton);
+        toolbar.addSeparator();
+        toolbar.add(splitButton);
+        toolbar.add(mergeButton);
         toolbar.addSeparator();
         toolbar.add(WebButton.createIconWebButton(loadIcon("append.png"), StyleConstants.smallRound, true));
         toolbar.add(WebButton.createIconWebButton(loadIcon("delete.png"), StyleConstants.smallRound, true));
@@ -258,6 +274,18 @@ public class MainForm {
 
     private void onUnpackPressed() {
         unpack(tree);
+    }
+
+    private void onSplitPressed() {
+        SplitDialog dialog = new SplitDialog();
+        dialog.pack();
+        dialog.setSize(380, dialog.getHeight());
+        dialog.setLocationRelativeTo(frame);
+        dialog.setVisible(true);
+    }
+
+    private void onMergePressed() {
+
     }
 
     private ImageIcon loadIcon(String s) {
@@ -333,13 +361,11 @@ public class MainForm {
     }
 
     private void unpack(final Node node) {
-        JFileChooser chooser = new JFileChooser();
-        chooser.setDialogTitle("Choose directory to unpack");
-        chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-        chooser.setAcceptAllFileFilterUsed(false);
-        if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
-            File selectedFile = chooser.getSelectedFile();
-            final File directory = new File(selectedFile.getAbsolutePath());
+        WebDirectoryChooser directoryChooser = new WebDirectoryChooser(frame.getOwner(), "Choose directory to unpack");
+        directoryChooser.setVisible(true);
+
+        if (directoryChooser.getResult() == DialogOptions.OK_OPTION) {
+            final File directory = directoryChooser.getSelectedDirectory();
             directory.mkdirs();
             final ProgressDialog progressDialog = new ProgressDialog();
             progressDialog.setSize(480, 120);
@@ -376,5 +402,25 @@ public class MainForm {
                 }
             }.start();
         }
+    }
+
+    private void delete(final Node node) {
+        new Thread() {
+            @Override
+            public void run() {
+                try {
+                    node.delete();
+                    SwingUtilities.invokeLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            setTree(tree);
+                            updateSelectedNode(tree);
+                        }
+                    });
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }.start();
     }
 }
