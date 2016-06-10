@@ -279,13 +279,17 @@ public class MainForm {
     private void onSplitPressed() {
         SplitDialog dialog = new SplitDialog();
         dialog.pack();
-        dialog.setSize(380, dialog.getHeight());
+        dialog.setSize(480, dialog.getHeight());
         dialog.setLocationRelativeTo(frame);
         dialog.setVisible(true);
     }
 
     private void onMergePressed() {
-
+        MergeDialog dialog = new MergeDialog();
+        dialog.pack();
+        dialog.setSize(380, dialog.getHeight());
+        dialog.setLocationRelativeTo(frame);
+        dialog.setVisible(true);
     }
 
     private ImageIcon loadIcon(String s) {

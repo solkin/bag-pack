@@ -77,7 +77,7 @@
               </grid>
             </constraints>
             <properties>
-              <text value="/Users/solkin/Desktop/upd/base2.bag"/>
+              <text value=""/>
             </properties>
           </component>
           <component id="7605b" class="javax.swing.JButton" binding="chooseBagButton">
@@ -103,7 +103,7 @@
               </grid>
             </constraints>
             <properties>
-              <text value="/Users/solkin/Desktop/upd/split"/>
+              <text value=""/>
             </properties>
           </component>
           <component id="cce67" class="javax.swing.JButton" binding="chooseDirButton">

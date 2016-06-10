@@ -7,15 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d668afb-509f-411f-82d1-4042f3a7625b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/res/merge.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/res/split.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/tomclaw/bag/SplitDialog.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/tomclaw/bag/SplitDialog.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm$8$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm$9$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm$9$2.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/bag_pack_jar/bag-pack.jar" afterPath="$PROJECT_DIR$/out/artifacts/bag_pack_jar/bag-pack.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/tomclaw/bag/MergeDialog.form" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/tomclaw/bag/MergeDialog.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/intellij/uiDesigner/core/AbstractLayout.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/intellij/uiDesigner/core/AbstractLayout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/intellij/uiDesigner/core/DimensionInfo.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/intellij/uiDesigner/core/DimensionInfo.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/intellij/uiDesigner/core/GridConstraints.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/intellij/uiDesigner/core/GridConstraints.class" />
@@ -37,6 +30,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/Main$1.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/Main$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/Main.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm$1.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm$10$1.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm$10$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm$10.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm$11$1.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm$11$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm$11$2.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm$11$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm$11.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm$11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm$12$1.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm$12$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm$12.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm$12.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm$2$1.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm$2$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm$2$2.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm$2$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm$2.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm$2.class" />
@@ -49,6 +49,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm$9.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm$9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/MainForm.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/Node$1.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/Node$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/Node$2.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/Node$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/Node.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/Node.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/PackDialog$1.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/PackDialog$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/PackDialog$2.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/PackDialog$2.class" />
@@ -64,14 +65,23 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/PackDialog$8.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/PackDialog$8.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/PackDialog.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/PackDialog.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/ProgressDialog.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/ProgressDialog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/bag_pack_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/bag_pack_jar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/SplitDialog$1.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/SplitDialog$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/SplitDialog$2.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/SplitDialog$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/SplitDialog$3.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/SplitDialog$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/SplitDialog$4.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/SplitDialog$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/SplitDialog$5.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/SplitDialog$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/SplitDialog$6.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/SplitDialog$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/SplitDialog$7$1.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/SplitDialog$7$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/SplitDialog$7$2$1.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/SplitDialog$7$2$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/SplitDialog$7$2.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/SplitDialog$7$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/SplitDialog$7$3.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/SplitDialog$7$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/SplitDialog$7.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/SplitDialog$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/SplitDialog$8.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/SplitDialog$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/SplitDialog.class" afterPath="$PROJECT_DIR$/out/production/bag-pack/com/tomclaw/bag/SplitDialog.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tomclaw/bag/Bag.java" afterPath="$PROJECT_DIR$/src/com/tomclaw/bag/Bag.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tomclaw/bag/MainForm.form" afterPath="$PROJECT_DIR$/src/com/tomclaw/bag/MainForm.form" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tomclaw/bag/MainForm.java" afterPath="$PROJECT_DIR$/src/com/tomclaw/bag/MainForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tomclaw/bag/Node.java" afterPath="$PROJECT_DIR$/src/com/tomclaw/bag/Node.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tomclaw/bag/PackDialog.java" afterPath="$PROJECT_DIR$/src/com/tomclaw/bag/PackDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/tomclaw/bag/SplitDialog.form" afterPath="$PROJECT_DIR$/src/com/tomclaw/bag/SplitDialog.form" />
     </list>
     <ignored path="bag-pack.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -96,74 +106,53 @@
       <file leaf-file-name="MainForm.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/MainForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="294" column="9" selection-start-line="294" selection-start-column="9" selection-end-line="294" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3297#3327#0" expanded="true" />
-                <element signature="e#4090#4120#0" expanded="true" />
-                <element signature="e#8884#9043#0" expanded="true" />
-                <element signature="e#9042#9043#0" expanded="true" />
-                <element signature="e#9203#9362#0" expanded="true" />
-                <element signature="e#9361#9362#0" expanded="true" />
-                <element signature="e#10371#10372#0" expanded="true" />
-                <element signature="e#10465#10466#0" expanded="true" />
-                <element signature="e#10844#10845#0" expanded="true" />
-                <element signature="e#10872#10873#0" expanded="true" />
-                <element signature="e#11880#11910#0" expanded="true" />
-                <element signature="e#14008#14906#0" expanded="true" />
-                <element signature="e#14905#14906#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="281" column="26" selection-start-line="281" selection-start-column="26" selection-end-line="281" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PackDialog.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/PackDialog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="142" column="20" selection-start-line="142" selection-start-column="20" selection-end-line="150" selection-end-column="23" />
-              <folding>
-                <element signature="e#4934#5181#0" expanded="true" />
-                <element signature="e#5180#5181#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SplitDialog.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/SplitDialog.form">
+      <file leaf-file-name="MergeDialog.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/MergeDialog.form">
           <provider selected="true" editor-type-id="ui-designer">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SplitDialog.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MergeDialog.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/MergeDialog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="154" column="55" selection-start-line="154" selection-start-column="55" selection-end-line="154" selection-end-column="55" />
+              <folding>
+                <element signature="e#3990#4380#0" expanded="true" />
+                <element signature="e#4379#4380#0" expanded="true" />
+                <element signature="e#4428#4797#0" expanded="true" />
+                <element signature="e#4796#4797#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FilesHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/FilesHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SplitDialog.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/SplitDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.18859649">
-              <caret line="112" column="92" selection-start-line="112" selection-start-column="92" selection-end-line="112" selection-end-column="92" />
+            <state relative-caret-position="-135">
+              <caret line="133" column="77" selection-start-line="133" selection-start-column="77" selection-end-line="133" selection-end-column="77" />
               <folding>
-                <element signature="e#946#1073#0" expanded="true" />
-                <element signature="e#1072#1073#0" expanded="true" />
-                <element signature="e#1116#1247#0" expanded="true" />
-                <element signature="e#1246#1247#0" expanded="true" />
-                <element signature="e#1293#1427#0" expanded="true" />
-                <element signature="e#1426#1427#0" expanded="true" />
-                <element signature="e#1473#1607#0" expanded="true" />
-                <element signature="e#1606#1607#0" expanded="true" />
-                <element signature="e#1741#1869#0" expanded="true" />
-                <element signature="e#1868#1869#0" expanded="true" />
-                <element signature="e#1953#2084#0" expanded="true" />
-                <element signature="e#2083#2084#0" expanded="true" />
                 <element signature="e#2629#6008#0" expanded="true" />
-                <element signature="e#3165#3394#0" expanded="true" />
-                <element signature="e#3393#3394#0" expanded="true" />
-                <element signature="e#5161#5448#0" expanded="true" />
-                <element signature="e#5447#5448#0" expanded="true" />
                 <element signature="e#6007#6008#0" expanded="true" />
-                <element signature="e#6053#6054#0" expanded="true" />
-                <element signature="e#6078#6079#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -172,23 +161,8 @@
       <file leaf-file-name="Bag.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/Bag.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
-              <folding>
-                <element signature="e#2686#2996#0" expanded="true" />
-                <element signature="e#2995#2996#0" expanded="true" />
-                <element signature="e#7693#7694#0" expanded="true" />
-                <element signature="e#7723#7724#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileOutputStream.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/src.zip!/java/io/FileOutputStream.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="169" column="11" selection-start-line="169" selection-start-column="11" selection-end-line="169" selection-end-column="11" />
+            <state relative-caret-position="150">
+              <caret line="11" column="50" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -197,14 +171,9 @@
       <file leaf-file-name="Node.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="170" column="0" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
-              <folding>
-                <element signature="e#1134#1135#0" expanded="true" />
-                <element signature="e#1161#1162#0" expanded="true" />
-                <element signature="e#3776#4051#0" expanded="true" />
-                <element signature="e#4050#4051#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="355">
+              <caret line="246" column="54" selection-start-line="246" selection-start-column="54" selection-end-line="246" selection-end-column="54" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -212,7 +181,7 @@
       <file leaf-file-name="LimitedInputStream.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/LimitedInputStream.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state relative-caret-position="1800">
               <caret line="128" column="42" selection-start-line="128" selection-start-column="42" selection-end-line="128" selection-end-column="42" />
               <folding />
             </state>
@@ -222,7 +191,7 @@
       <file leaf-file-name="BagFile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/BagFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state relative-caret-position="180">
               <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
               <folding>
                 <element signature="e#665#666#0" expanded="true" />
@@ -271,16 +240,18 @@
         <option value="$PROJECT_DIR$/src/com/tomclaw/bag/Node.java" />
         <option value="$PROJECT_DIR$/src/com/tomclaw/bag/PackDialog.java" />
         <option value="$PROJECT_DIR$/src/com/tomclaw/bag/Bag.java" />
+        <option value="$PROJECT_DIR$/src/com/tomclaw/bag/SplitDialog.java" />
+        <option value="$PROJECT_DIR$/src/com/tomclaw/bag/MergeDialog.form" />
+        <option value="$PROJECT_DIR$/src/com/tomclaw/bag/MergeDialog.java" />
         <option value="$PROJECT_DIR$/src/com/tomclaw/bag/MainForm.java" />
         <option value="$PROJECT_DIR$/src/com/tomclaw/bag/SplitDialog.form" />
-        <option value="$PROJECT_DIR$/src/com/tomclaw/bag/SplitDialog.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="1920" />
-    <option name="height" value="970" />
+    <option name="y" value="23" />
+    <option name="width" value="1366" />
+    <option name="height" value="677" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -307,6 +278,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -415,36 +388,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PackDialog" />
-              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bag-pack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bag-pack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MainForm" />
+              <option name="myItemId" value="MergeDialog" />
               <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -453,7 +402,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
@@ -489,31 +438,21 @@
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
-      <option name="SELECTED_CLOUD_DEVICE_PROJECT_ID" value="" />
-      <option name="IS_VALID_CLOUD_MATRIX_SELECTION" value="false" />
-      <option name="INVALID_CLOUD_MATRIX_SELECTION_ERROR" value="" />
-      <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
-      <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="" />
-      <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
@@ -523,27 +462,15 @@
       <option name="METHOD_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
-      <option name="SELECTED_CLOUD_DEVICE_PROJECT_ID" value="" />
-      <option name="IS_VALID_CLOUD_MATRIX_SELECTION" value="false" />
-      <option name="INVALID_CLOUD_MATRIX_SELECTION_ERROR" value="" />
-      <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
-      <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="" />
-      <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -730,7 +657,9 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -739,26 +668,28 @@
       <changelist id="8d668afb-509f-411f-82d1-4042f3a7625b" name="Default" comment="" />
       <created>1463313200801</created>
       <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
       <updated>1463313200801</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="970" extended-state="0" />
+    <frame x="0" y="23" width="1366" height="677" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3241491" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22095671" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22039473" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15282215" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15153733" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -767,10 +698,9 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -793,12 +723,6 @@
           <properties />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/tomclaw/bag/SplitDialog.java</url>
-          <line>126</line>
-          <properties />
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
       </breakpoints>
       <option name="time" value="17" />
     </breakpoint-manager>
@@ -819,56 +743,17 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/MainForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3297#3327#0" expanded="true" />
-            <element signature="e#4090#4120#0" expanded="true" />
-            <element signature="e#8884#9043#0" expanded="true" />
-            <element signature="e#9042#9043#0" expanded="true" />
-            <element signature="e#9203#9362#0" expanded="true" />
-            <element signature="e#9361#9362#0" expanded="true" />
-            <element signature="e#10371#10372#0" expanded="true" />
-            <element signature="e#10465#10466#0" expanded="true" />
-            <element signature="e#10844#10845#0" expanded="true" />
-            <element signature="e#10872#10873#0" expanded="true" />
-            <element signature="e#11880#11910#0" expanded="true" />
-            <element signature="e#14008#14906#0" expanded="true" />
-            <element signature="e#14905#14906#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/PackDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="9" selection-start-line="79" selection-start-column="8" selection-end-line="85" selection-end-column="9" />
-          <folding>
-            <element signature="e#4934#5181#0" expanded="true" />
-            <element signature="e#5180#5181#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="147" column="60" selection-start-line="147" selection-start-column="60" selection-end-line="147" selection-end-column="60" />
-          <folding>
-            <element signature="e#1134#1135#0" expanded="true" />
-            <element signature="e#1161#1162#0" expanded="true" />
-            <element signature="e#3776#4051#0" expanded="true" />
-            <element signature="e#4050#4051#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/LimitedInputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="128" column="42" selection-start-line="128" selection-start-column="42" selection-end-line="128" selection-end-column="42" />
           <folding />
         </state>
@@ -876,7 +761,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/BagFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
           <folding>
             <element signature="e#665#666#0" expanded="true" />
@@ -887,54 +772,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/MainForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3297#3327#0" expanded="true" />
-            <element signature="e#4090#4120#0" expanded="true" />
-            <element signature="e#8884#9043#0" expanded="true" />
-            <element signature="e#9042#9043#0" expanded="true" />
-            <element signature="e#9203#9362#0" expanded="true" />
-            <element signature="e#9361#9362#0" expanded="true" />
-            <element signature="e#10371#10372#0" expanded="true" />
-            <element signature="e#10465#10466#0" expanded="true" />
-            <element signature="e#10844#10845#0" expanded="true" />
-            <element signature="e#10872#10873#0" expanded="true" />
-            <element signature="e#11880#11910#0" expanded="true" />
-            <element signature="e#14008#14906#0" expanded="true" />
-            <element signature="e#14905#14906#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/PackDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="85" column="9" selection-start-line="79" selection-start-column="8" selection-end-line="85" selection-end-column="9" />
           <folding>
-            <element signature="e#4934#5181#0" expanded="true" />
-            <element signature="e#5180#5181#0" expanded="true" />
+            <element signature="e#5281#5619#0" expanded="true" />
+            <element signature="e#5618#5619#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="147" column="60" selection-start-line="147" selection-start-column="60" selection-end-line="147" selection-end-column="60" />
-          <folding>
-            <element signature="e#1134#1135#0" expanded="true" />
-            <element signature="e#1161#1162#0" expanded="true" />
-            <element signature="e#3776#4051#0" expanded="true" />
-            <element signature="e#4050#4051#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/LimitedInputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="128" column="42" selection-start-line="128" selection-start-column="42" selection-end-line="128" selection-end-column="42" />
           <folding />
         </state>
@@ -942,7 +807,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/BagFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
           <folding>
             <element signature="e#665#666#0" expanded="true" />
@@ -953,54 +818,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/MainForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3297#3327#0" expanded="true" />
-            <element signature="e#4090#4120#0" expanded="true" />
-            <element signature="e#8884#9043#0" expanded="true" />
-            <element signature="e#9042#9043#0" expanded="true" />
-            <element signature="e#9203#9362#0" expanded="true" />
-            <element signature="e#9361#9362#0" expanded="true" />
-            <element signature="e#10371#10372#0" expanded="true" />
-            <element signature="e#10465#10466#0" expanded="true" />
-            <element signature="e#10844#10845#0" expanded="true" />
-            <element signature="e#10872#10873#0" expanded="true" />
-            <element signature="e#11880#11910#0" expanded="true" />
-            <element signature="e#14008#14906#0" expanded="true" />
-            <element signature="e#14905#14906#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/PackDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="85" column="9" selection-start-line="79" selection-start-column="8" selection-end-line="85" selection-end-column="9" />
           <folding>
-            <element signature="e#4934#5181#0" expanded="true" />
-            <element signature="e#5180#5181#0" expanded="true" />
+            <element signature="e#5281#5619#0" expanded="true" />
+            <element signature="e#5618#5619#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="147" column="60" selection-start-line="147" selection-start-column="60" selection-end-line="147" selection-end-column="60" />
-          <folding>
-            <element signature="e#1134#1135#0" expanded="true" />
-            <element signature="e#1161#1162#0" expanded="true" />
-            <element signature="e#3776#4051#0" expanded="true" />
-            <element signature="e#4050#4051#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/LimitedInputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="128" column="42" selection-start-line="128" selection-start-column="42" selection-end-line="128" selection-end-column="42" />
           <folding />
         </state>
@@ -1008,7 +853,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/BagFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
           <folding>
             <element signature="e#665#666#0" expanded="true" />
@@ -1019,54 +864,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/MainForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3297#3327#0" expanded="true" />
-            <element signature="e#4090#4120#0" expanded="true" />
-            <element signature="e#8884#9043#0" expanded="true" />
-            <element signature="e#9042#9043#0" expanded="true" />
-            <element signature="e#9203#9362#0" expanded="true" />
-            <element signature="e#9361#9362#0" expanded="true" />
-            <element signature="e#10371#10372#0" expanded="true" />
-            <element signature="e#10465#10466#0" expanded="true" />
-            <element signature="e#10844#10845#0" expanded="true" />
-            <element signature="e#10872#10873#0" expanded="true" />
-            <element signature="e#11880#11910#0" expanded="true" />
-            <element signature="e#14008#14906#0" expanded="true" />
-            <element signature="e#14905#14906#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/PackDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="85" column="9" selection-start-line="79" selection-start-column="8" selection-end-line="85" selection-end-column="9" />
           <folding>
-            <element signature="e#4934#5181#0" expanded="true" />
-            <element signature="e#5180#5181#0" expanded="true" />
+            <element signature="e#5281#5619#0" expanded="true" />
+            <element signature="e#5618#5619#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="147" column="60" selection-start-line="147" selection-start-column="60" selection-end-line="147" selection-end-column="60" />
-          <folding>
-            <element signature="e#1134#1135#0" expanded="true" />
-            <element signature="e#1161#1162#0" expanded="true" />
-            <element signature="e#3776#4051#0" expanded="true" />
-            <element signature="e#4050#4051#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/LimitedInputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="128" column="42" selection-start-line="128" selection-start-column="42" selection-end-line="128" selection-end-column="42" />
           <folding />
         </state>
@@ -1074,7 +899,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/BagFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
           <folding>
             <element signature="e#665#666#0" expanded="true" />
@@ -1085,7 +910,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/TextUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
         </state>
       </provider>
@@ -1095,98 +920,98 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/weblaf-complete-1.28.jar!/com/alee/global/GlobalConstants.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="36" column="41" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/ProgressDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/weblaf-complete-1.28.jar!/com/alee/extended/list/FileListModel.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/weblaf-src-1.28.jar!/com/alee/extended/list/WebFileListStyle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/weblaf-src-1.28.jar!/com/alee/extended/list/WebFileList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="44" column="30" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/weblaf-src-1.28.jar!/com/alee/extended/list/FileElement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="99" column="25" selection-start-line="99" selection-start-column="16" selection-end-line="99" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/weblaf-src-1.28.jar!/com/alee/extended/list/FileListModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="167" column="11" selection-start-line="167" selection-start-column="11" selection-end-line="167" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/weblaf-src-1.28.jar!/com/alee/laf/list/WebListModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="102" column="23" selection-start-line="102" selection-start-column="23" selection-end-line="102" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/weblaf-src-1.28.jar!/com/alee/global/StyleConstants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="138" column="22" selection-start-line="138" selection-start-column="22" selection-end-line="138" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/weblaf-src-1.28.jar!/com/alee/laf/button/WebButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="933" column="28" selection-start-line="933" selection-start-column="28" selection-end-line="933" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/weblaf-src-1.28.jar!/com/alee/managers/style/skin/web/PopupStyle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/VirtualFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
           <folding>
             <element signature="e#370#371#0" expanded="false" />
@@ -1195,29 +1020,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/FilesHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="25" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/MainForm.form">
       <provider editor-type-id="ui-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/LimitedInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="128" column="42" selection-start-line="128" selection-start-column="42" selection-end-line="128" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -1237,22 +1046,46 @@
         <state />
       </provider>
       <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/src.zip!/java/io/FileOutputStream.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/src.zip!/java/io/FileOutputStream.java" />
+    <entry file="file://$PROJECT_DIR$/src/res/append.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/PackDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="169" column="11" selection-start-line="169" selection-start-column="11" selection-end-line="169" selection-end-column="11" />
+        <state relative-caret-position="15">
+          <caret line="142" column="20" selection-start-line="142" selection-start-column="20" selection-end-line="150" selection-end-column="23" />
+          <folding>
+            <element signature="e#5281#5619#0" expanded="true" />
+            <element signature="e#5618#5619#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/weblaf-src-1.28.jar!/com/alee/utils/filefilter/FilesFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/LimitedInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1800">
+          <caret line="128" column="42" selection-start-line="128" selection-start-column="42" selection-end-line="128" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/BagFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="180">
           <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
           <folding>
             <element signature="e#665#666#0" expanded="true" />
@@ -1261,67 +1094,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/res/append.png">
-      <provider selected="true" editor-type-id="images">
+    <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/MergeDialog.form">
+      <provider selected="true" editor-type-id="ui-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/Bag.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
-          <folding>
-            <element signature="e#2686#2996#0" expanded="true" />
-            <element signature="e#2995#2996#0" expanded="true" />
-            <element signature="e#7693#7694#0" expanded="true" />
-            <element signature="e#7723#7724#0" expanded="true" />
-          </folding>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="170" column="0" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
-          <folding>
-            <element signature="e#1134#1135#0" expanded="true" />
-            <element signature="e#1161#1162#0" expanded="true" />
-            <element signature="e#3776#4051#0" expanded="true" />
-            <element signature="e#4050#4051#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="355">
+          <caret line="246" column="54" selection-start-line="246" selection-start-column="54" selection-end-line="246" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/Bag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="50" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/FilesHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/MainForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="294" column="9" selection-start-line="294" selection-start-column="9" selection-end-line="294" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3297#3327#0" expanded="true" />
-            <element signature="e#4090#4120#0" expanded="true" />
-            <element signature="e#8884#9043#0" expanded="true" />
-            <element signature="e#9042#9043#0" expanded="true" />
-            <element signature="e#9203#9362#0" expanded="true" />
-            <element signature="e#9361#9362#0" expanded="true" />
-            <element signature="e#10371#10372#0" expanded="true" />
-            <element signature="e#10465#10466#0" expanded="true" />
-            <element signature="e#10844#10845#0" expanded="true" />
-            <element signature="e#10872#10873#0" expanded="true" />
-            <element signature="e#11880#11910#0" expanded="true" />
-            <element signature="e#14008#14906#0" expanded="true" />
-            <element signature="e#14905#14906#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="281" column="26" selection-start-line="281" selection-start-column="26" selection-end-line="281" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/PackDialog.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/SplitDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="142" column="20" selection-start-line="142" selection-start-column="20" selection-end-line="150" selection-end-column="23" />
+        <state relative-caret-position="-135">
+          <caret line="133" column="77" selection-start-line="133" selection-start-column="77" selection-end-line="133" selection-end-column="77" />
           <folding>
-            <element signature="e#4934#5181#0" expanded="true" />
-            <element signature="e#5180#5181#0" expanded="true" />
+            <element signature="e#2629#6008#0" expanded="true" />
+            <element signature="e#6007#6008#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1330,32 +1152,22 @@
       <provider selected="true" editor-type-id="ui-designer">
         <state />
       </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/SplitDialog.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/MergeDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18859649">
-          <caret line="112" column="92" selection-start-line="112" selection-start-column="92" selection-end-line="112" selection-end-column="92" />
+        <state relative-caret-position="280">
+          <caret line="154" column="55" selection-start-line="154" selection-start-column="55" selection-end-line="154" selection-end-column="55" />
           <folding>
-            <element signature="e#946#1073#0" expanded="true" />
-            <element signature="e#1072#1073#0" expanded="true" />
-            <element signature="e#1116#1247#0" expanded="true" />
-            <element signature="e#1246#1247#0" expanded="true" />
-            <element signature="e#1293#1427#0" expanded="true" />
-            <element signature="e#1426#1427#0" expanded="true" />
-            <element signature="e#1473#1607#0" expanded="true" />
-            <element signature="e#1606#1607#0" expanded="true" />
-            <element signature="e#1741#1869#0" expanded="true" />
-            <element signature="e#1868#1869#0" expanded="true" />
-            <element signature="e#1953#2084#0" expanded="true" />
-            <element signature="e#2083#2084#0" expanded="true" />
-            <element signature="e#2629#6008#0" expanded="true" />
-            <element signature="e#3165#3394#0" expanded="true" />
-            <element signature="e#3393#3394#0" expanded="true" />
-            <element signature="e#5161#5448#0" expanded="true" />
-            <element signature="e#5447#5448#0" expanded="true" />
-            <element signature="e#6007#6008#0" expanded="true" />
-            <element signature="e#6053#6054#0" expanded="true" />
-            <element signature="e#6078#6079#0" expanded="true" />
+            <element signature="e#3990#4380#0" expanded="true" />
+            <element signature="e#4379#4380#0" expanded="true" />
+            <element signature="e#4428#4797#0" expanded="true" />
+            <element signature="e#4796#4797#0" expanded="true" />
           </folding>
         </state>
       </provider>
