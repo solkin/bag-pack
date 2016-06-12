@@ -108,7 +108,12 @@ public class PackDialog extends JDialog {
         progressDialog.setVisible(true);
         final String bagFilePath = bagField.getText();
         final String directoryPath = directoryField.getText();
-        final String[] exclude = excludeField.getText().split(",");
+        final String[] exclude;
+        if (excludeField.getText().length() > 0) {
+            exclude = excludeField.getText().split(",");
+        } else {
+            exclude = new String[0];
+        }
         final boolean open = openAfterCreateCheckBox.isSelected();
         new Thread() {
             @Override

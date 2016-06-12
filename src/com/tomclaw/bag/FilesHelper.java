@@ -29,12 +29,12 @@ public class FilesHelper {
 
     public static String getFileExtension(String fileName) {
         String extension = "";
-
         int i = fileName.lastIndexOf('.');
-        int p = Math.max(fileName.lastIndexOf('/'), fileName.lastIndexOf('\\'));
-
-        if (i > p) {
-            extension = fileName.substring(i+1);
+        if (i >= 0) {
+            int p = Math.max(fileName.lastIndexOf('/'), fileName.lastIndexOf('\\'));
+            if (i > p) {
+                extension = fileName.substring(i + 1);
+            }
         }
         return extension;
     }

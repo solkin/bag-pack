@@ -238,7 +238,10 @@ public class TarDialog extends JDialog {
         }
         ByteArrayOutputStream header = new ByteArrayOutputStream();
         filePath = filePath.substring(1);
-        byte[] pathBytes = filePath.getBytes();
+        byte[] pathBytes;
+        while ((pathBytes = filePath.getBytes()).length >= 100) {
+            filePath = filePath.substring(filePath.indexOf('/') + 1);
+        }
         System.out.println("*> " + filePath);
         byte[] tarFilePath = new byte[100];
         System.arraycopy(pathBytes, 0, tarFilePath, 0, pathBytes.length);
