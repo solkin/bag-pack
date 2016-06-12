@@ -303,13 +303,9 @@ public class TarDialog extends JDialog {
         String devMinor = "000000";
         writeTarString(header, devMinor);
         // Prefix.
-        //pathShorten
-//        byte[] prefix = new byte[155];
-//        header.write(prefix);
         byte[] prefixBytes;
         if (pathShorten > 0) {
             String prePath = filePath.substring(0, pathShorten - 1);
-            System.out.println("shorten: " + prePath);
             prefixBytes = prePath.getBytes();
         } else {
             prefixBytes = new byte[0];
@@ -317,8 +313,7 @@ public class TarDialog extends JDialog {
         byte[] prefixTemplate = new byte[155];
         System.arraycopy(prefixBytes, 0, prefixTemplate, 0, prefixBytes.length);
         header.write(prefixTemplate);
-
-        // Prefix.
+        // Block-align.
         byte[] something = new byte[12];
         header.write(something);
         // Header at all.

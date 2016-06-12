@@ -96,7 +96,11 @@ public class PackDialog extends JDialog {
         });
         if (bagChooser.showSaveDialog(getOwner()) == WebFileChooser.APPROVE_OPTION) {
             File file = bagChooser.getSelectedFile();
-            bagField.setText(file.getAbsolutePath() + ".bag");
+            String bagFile = file.getAbsolutePath();
+            if (!FilesHelper.getFileExtension(file.getAbsolutePath()).equals("bag")) {
+                bagFile += ".bag";
+            }
+            bagField.setText(bagFile);
         }
     }
 

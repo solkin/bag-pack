@@ -85,7 +85,7 @@
               </grid>
             </constraints>
             <properties>
-              <text value="/Users/solkin/Desktop/test/example.bag"/>
+              <text value=""/>
             </properties>
           </component>
           <component id="f7d03" class="javax.swing.JTextField" binding="tarField">
@@ -95,7 +95,7 @@
               </grid>
             </constraints>
             <properties>
-              <text value="/Users/solkin/Desktop/test/example.tar"/>
+              <text value=""/>
             </properties>
           </component>
           <component id="239ca" class="javax.swing.JButton" binding="bagSelectButton">
