@@ -239,10 +239,12 @@ public class TarDialog extends JDialog {
         ByteArrayOutputStream header = new ByteArrayOutputStream();
         filePath = filePath.substring(1);
         byte[] pathBytes;
-        while ((pathBytes = filePath.getBytes()).length >= 100) {
-            filePath = filePath.substring(filePath.indexOf('/') + 1);
+        String pathCutted = filePath;
+        while ((pathBytes = pathCutted.getBytes()).length >= 100) {
+            pathCutted = pathCutted.substring(pathCutted.indexOf('/') + 1);
         }
-        System.out.println("*> " + filePath);
+        int pathShorten = filePath.length() - pathCutted.length();
+        System.out.println("*> " + pathCutted);
         byte[] tarFilePath = new byte[100];
         System.arraycopy(pathBytes, 0, tarFilePath, 0, pathBytes.length);
         // Path.
@@ -301,8 +303,21 @@ public class TarDialog extends JDialog {
         String devMinor = "000000";
         writeTarString(header, devMinor);
         // Prefix.
-        byte[] prefix = new byte[155];
-        header.write(prefix);
+        //pathShorten
+//        byte[] prefix = new byte[155];
+//        header.write(prefix);
+        byte[] prefixBytes;
+        if (pathShorten > 0) {
+            String prePath = filePath.substring(0, pathShorten - 1);
+            System.out.println("shorten: " + prePath);
+            prefixBytes = prePath.getBytes();
+        } else {
+            prefixBytes = new byte[0];
+        }
+        byte[] prefixTemplate = new byte[155];
+        System.arraycopy(prefixBytes, 0, prefixTemplate, 0, prefixBytes.length);
+        header.write(prefixTemplate);
+
         // Prefix.
         byte[] something = new byte[12];
         header.write(something);
