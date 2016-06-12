@@ -241,6 +241,15 @@ public class MainForm {
         toolbar.addSeparator();
         toolbar.add(WebButton.createIconWebButton(loadIcon("append.png"), StyleConstants.smallRound, true));
         toolbar.add(WebButton.createIconWebButton(loadIcon("delete.png"), StyleConstants.smallRound, true));
+        WebButton tarButton = WebButton.createIconWebButton(loadIcon("save.png"), StyleConstants.smallRound, true);
+        tarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                onTarPressed();
+            }
+        });
+        toolbar.addSeparator();
+        toolbar.add(tarButton);
     }
 
     private void onPackPressed() {
@@ -287,7 +296,15 @@ public class MainForm {
     private void onMergePressed() {
         MergeDialog dialog = new MergeDialog();
         dialog.pack();
-        dialog.setSize(380, dialog.getHeight());
+        dialog.setSize(480, dialog.getHeight());
+        dialog.setLocationRelativeTo(frame);
+        dialog.setVisible(true);
+    }
+
+    private void onTarPressed() {
+        TarDialog dialog = new TarDialog();
+        dialog.pack();
+        dialog.setSize(480, dialog.getHeight());
         dialog.setLocationRelativeTo(frame);
         dialog.setVisible(true);
     }
@@ -395,6 +412,10 @@ public class MainForm {
 //                                        progressDialog.setProgress(percent);
 //                                    }
 //                                });
+                        }
+
+                        @Override
+                        public void onPath(String path) {
                         }
                     });
                     SwingUtilities.invokeLater(new Runnable() {

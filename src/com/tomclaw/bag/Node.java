@@ -1,9 +1,7 @@
 package com.tomclaw.bag;
 
 import java.io.*;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by solkin on 15/05/16.
@@ -111,11 +109,45 @@ public class Node extends HashMap<String, Node> {
 
     private void walk(String path, WalkCallback callback) {
         if (isEmpty()) {
-            callback.onNode(path, this);
+
         } else {
             path += getName() + PATH_SEPARATOR;
+            List<Pair<String, Node>> pairList = new ArrayList<>(values().size());
             for (Node node : values()) {
-                node.walk(path, callback);
+                if (node.isEmpty()) {
+                    pairList.add(new Pair<>(path, node));
+                }
+            }
+            Collections.sort(pairList, new Comparator<Pair<String, Node>>() {
+                @Override
+                public int compare(Pair<String, Node> o1, Pair<String, Node> o2) {
+                    return o1.getValue().getName().compareToIgnoreCase(o2.getValue().getName());
+                }
+            });
+            for (Pair<String, Node> pair : pairList) {
+                callback.onNode(pair.getKey(), pair.getValue());
+            }
+
+            pairList.clear();
+
+            for (Node node : values()) {
+                if (!node.isEmpty()) {
+                    pairList.add(new Pair<>(path + node.getName() + PATH_SEPARATOR, node));
+                }
+            }
+            Collections.sort(pairList, new Comparator<Pair<String, Node>>() {
+                @Override
+                public int compare(Pair<String, Node> o1, Pair<String, Node> o2) {
+                    return o1.getKey().compareToIgnoreCase(o2.getKey());
+                }
+            });
+            for (Pair<String, Node> pair : pairList) {
+                callback.onPath(pair.getKey());
+            }
+            for (int c = pairList.size() - 1; c >= 0; c--) {
+                Pair<String, Node> pair = pairList.get(c);
+                Node value = pair.getValue();
+                value.walk(path, callback);
             }
         }
     }
@@ -149,6 +181,10 @@ public class Node extends HashMap<String, Node> {
                     if (node.getDescriptor() > descriptor) {
                         node.moveDescriptor(-delta);
                     }
+                }
+
+                @Override
+                public void onPath(String path) {
                 }
             });
         } finally {
@@ -267,5 +303,6 @@ public class Node extends HashMap<String, Node> {
     public interface WalkCallback {
 
         void onNode(String path, Node node);
+        void onPath(String path);
     }
 }

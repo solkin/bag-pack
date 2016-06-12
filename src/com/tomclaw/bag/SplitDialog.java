@@ -94,6 +94,10 @@ public class SplitDialog extends JDialog {
                         public void onNode(String path, Node node) {
                             files.incrementAndGet();
                         }
+
+                        @Override
+                        public void onPath(String path) {
+                        }
                     });
                     node.walk(new Node.WalkCallback() {
 
@@ -138,6 +142,10 @@ public class SplitDialog extends JDialog {
                                 e.printStackTrace();
                             }
                         }
+
+                        @Override
+                        public void onPath(String path) {
+                        }
                     });
                     SwingUtilities.invokeLater(new Runnable() {
                         @Override
@@ -171,7 +179,7 @@ public class SplitDialog extends JDialog {
                 return "Bags (*.bag)";
             }
         });
-        if (bagChooser.showSaveDialog(getOwner()) == WebFileChooser.APPROVE_OPTION) {
+        if (bagChooser.showOpenDialog(getOwner()) == WebFileChooser.APPROVE_OPTION) {
             File file = bagChooser.getSelectedFile();
             bagField.setText(file.getAbsolutePath());
         }
