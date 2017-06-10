@@ -3,14 +3,12 @@ package com.tomclaw.bag;
 import com.alee.extended.filechooser.WebDirectoryChooser;
 import com.alee.laf.filechooser.WebFileChooser;
 import com.alee.utils.swing.DialogOptions;
-import sun.java2d.xr.MutableInteger;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
 import java.awt.event.*;
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
