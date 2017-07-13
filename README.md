@@ -10,3 +10,5 @@ It stores file inside as simple as possible, nothing more.
 `64-bit big endian` - file size
 
 `RAW` - file data
+
+![Screenshot](art/main.png "Main window")

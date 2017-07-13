@@ -62,7 +62,7 @@ public class MainForm {
 
     public static void main(String[] args) {
         MainForm mainForm = new MainForm();
-        JFrame frame = new JFrame("MainForm");
+        JFrame frame = new JFrame("Bag Pack");
         mainForm.frame = frame;
         frame.setContentPane(mainForm.panel1);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
