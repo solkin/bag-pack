@@ -2,7 +2,6 @@ package com.tomclaw.bag;
 
 import com.alee.extended.filechooser.WebDirectoryChooser;
 import com.alee.laf.filechooser.WebFileChooser;
-import com.alee.utils.filefilter.FilesFilter;
 import com.alee.utils.swing.DialogOptions;
 
 import javax.swing.*;
@@ -171,7 +170,7 @@ public class MergeDialog extends JDialog {
                         SwingUtilities.invokeLater(new Runnable() {
                             @Override
                             public void run() {
-                                progressDialog.setProgress(100 * index / volumes.size() );
+                                progressDialog.setProgress(100 * index / volumes.size());
                             }
                         });
                     }

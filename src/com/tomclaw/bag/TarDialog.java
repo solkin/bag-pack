@@ -164,7 +164,7 @@ public class TarDialog extends JDialog {
                             } catch (IOException e) {
                                 e.printStackTrace();
                             } finally {
-                                if (input != null){
+                                if (input != null) {
                                     try {
                                         input.close();
                                     } catch (IOException ignored) {
@@ -175,7 +175,7 @@ public class TarDialog extends JDialog {
                             SwingUtilities.invokeLater(new Runnable() {
                                 @Override
                                 public void run() {
-                                    progressDialog.setProgress(100 * index / total );
+                                    progressDialog.setProgress(100 * index / total);
                                 }
                             });
                         }
@@ -202,7 +202,7 @@ public class TarDialog extends JDialog {
                 } catch (IOException e) {
                     e.printStackTrace();
                 } finally {
-                    if (output != null){
+                    if (output != null) {
                         try {
                             output.close();
                         } catch (IOException ignored) {
@@ -324,7 +324,7 @@ public class TarDialog extends JDialog {
         }
         // Checksum for header record.
         checksumBytes = Integer.toOctalString(checksum).getBytes();
-        byte[] checksumTemplate = new byte[] {'0', '0', '0', '0', '0', '0', 0, ' '};
+        byte[] checksumTemplate = new byte[]{'0', '0', '0', '0', '0', '0', 0, ' '};
         System.arraycopy(checksumBytes, 0, checksumTemplate, checksumTemplate.length - 2 - checksumBytes.length, checksumBytes.length);
         System.arraycopy(checksumTemplate, 0, headerBytes, checksumOffset, checksumTemplate.length);
         // Write "checksummed" header.

@@ -8,16 +8,14 @@ public class Main {
 
     public static void main(final String[] args) {
         // You should work with UI (including installing L&F) inside Event Dispatch Thread (EDT)
-        SwingUtilities.invokeLater ( new Runnable ()
-        {
-            public void run ()
-            {
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
                 // Install WebLaF as application L&F
-                WebLookAndFeel.install ();
+                WebLookAndFeel.install();
 
                 // Create you Swing application here
                 MainForm.main(args);
             }
-        } );
+        });
     }
 }

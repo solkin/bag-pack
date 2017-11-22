@@ -1,7 +1,6 @@
 package com.tomclaw.bag;
 
 import com.alee.extended.filechooser.WebDirectoryChooser;
-import com.alee.global.GlobalConstants;
 import com.alee.laf.filechooser.WebFileChooser;
 import com.alee.utils.swing.DialogOptions;
 

@@ -7,7 +7,10 @@ import com.alee.utils.swing.DialogOptions;
 import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
 import java.awt.event.*;
-import java.io.*;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -133,7 +136,7 @@ public class SplitDialog extends JDialog {
                                 SwingUtilities.invokeLater(new Runnable() {
                                     @Override
                                     public void run() {
-                                        progressDialog.setProgress(100 * fileNo / files.get() );
+                                        progressDialog.setProgress(100 * fileNo / files.get());
                                     }
                                 });
                             } catch (IOException e) {

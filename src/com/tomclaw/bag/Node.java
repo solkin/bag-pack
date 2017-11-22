@@ -94,7 +94,7 @@ public class Node extends HashMap<String, Node> {
         Node node = get(name);
         if (node == null) {
             node = new Node(this, name, length, file, descriptor);
-            add (node);
+            add(node);
         }
         return node;
     }
@@ -303,6 +303,7 @@ public class Node extends HashMap<String, Node> {
     public interface WalkCallback {
 
         void onNode(String path, Node node);
+
         void onPath(String path);
     }
 }

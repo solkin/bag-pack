@@ -10,7 +10,6 @@ import com.alee.extended.list.WebFileList;
 import com.alee.extended.statusbar.WebMemoryBar;
 import com.alee.extended.statusbar.WebStatusBar;
 import com.alee.global.StyleConstants;
-import com.alee.laf.WebLookAndFeel;
 import com.alee.laf.button.WebButton;
 import com.alee.laf.menu.WebMenuItem;
 import com.alee.laf.menu.WebPopupMenu;
@@ -119,17 +118,17 @@ public class MainForm {
                         File selectedFile = webFileList.getSelectedFile();
                         final Node node = selectedNode.get(selectedFile.getName());
 
-                        final WebPopupMenu popupMenu = new WebPopupMenu ();
+                        final WebPopupMenu popupMenu = new WebPopupMenu();
                         popupMenu.setPopupStyle(PopupStyle.simple);
 
-                        WebMenuItem unpackItem = new WebMenuItem( "Unpack", loadIcon("unpack.png"), Hotkey.ALT_U );
+                        WebMenuItem unpackItem = new WebMenuItem("Unpack", loadIcon("unpack.png"), Hotkey.ALT_U);
                         unpackItem.addActionListener(new ActionListener() {
                             @Override
                             public void actionPerformed(ActionEvent e) {
                                 unpack(node);
                             }
                         });
-                        WebMenuItem deleteItem = new WebMenuItem ( "Delete", loadIcon("delete.png"), Hotkey.DELETE );
+                        WebMenuItem deleteItem = new WebMenuItem("Delete", loadIcon("delete.png"), Hotkey.DELETE);
                         deleteItem.addActionListener(new ActionListener() {
                             @Override
                             public void actionPerformed(ActionEvent e) {
@@ -137,9 +136,9 @@ public class MainForm {
                             }
                         });
 
-                        popupMenu.add ( unpackItem );
-                        popupMenu.addSeparator ();
-                        popupMenu.add ( deleteItem );
+                        popupMenu.add(unpackItem);
+                        popupMenu.addSeparator();
+                        popupMenu.add(deleteItem);
                         popupMenu.show(webFileList, e.getX(), e.getY());
                     }
                 } else if (e.getClickCount() == 2 && e.getButton() == MouseEvent.BUTTON1) {
