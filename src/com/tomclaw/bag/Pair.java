@@ -3,6 +3,7 @@ package com.tomclaw.bag;
 /**
  * Created by solkin on 6/12/16.
  */
+@SuppressWarnings("WeakerAccess")
 public class Pair<Key, Value> {
 
     private Key key;

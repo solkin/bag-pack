@@ -6,6 +6,7 @@ import java.util.*;
 /**
  * Created by solkin on 15/05/16.
  */
+@SuppressWarnings("WeakerAccess")
 public class Node extends HashMap<String, Node> {
 
     private static final int BUFFER_SIZE = 102400;
@@ -108,9 +109,7 @@ public class Node extends HashMap<String, Node> {
     }
 
     private void walk(String path, WalkCallback callback) {
-        if (isEmpty()) {
-
-        } else {
+        if (!isEmpty()) {
             path += getName() + PATH_SEPARATOR;
             List<Pair<String, Node>> pairList = new ArrayList<>(values().size());
             for (Node node : values()) {
@@ -227,6 +226,7 @@ public class Node extends HashMap<String, Node> {
         return node;
     }
 
+    @SuppressWarnings("TryFinallyCanBeTryWithResources")
     private static void read(InputStream inputStream, BagCallback callback) throws IOException {
         DataInputStream stream = null;
         try {
@@ -264,6 +264,7 @@ public class Node extends HashMap<String, Node> {
         return new BagFile(path, length, new LimitedInputStream(stream, length), internal);
     }
 
+    @SuppressWarnings("StatementWithEmptyBody")
     private static void skipStream(long length, InputStream stream) throws IOException {
         long skipped = 0;
         if (length == 0) {
@@ -272,6 +273,7 @@ public class Node extends HashMap<String, Node> {
         while ((skipped += stream.skip(length - skipped)) < length) ;
     }
 
+    @SuppressWarnings({"TryFinallyCanBeTryWithResources", "ResultOfMethodCallIgnored"})
     public static void saveFile(File file, InputStream stream) throws IOException {
         if (file.exists()) {
             file.delete();

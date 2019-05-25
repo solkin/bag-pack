@@ -53,7 +53,7 @@ public class FilesHelper {
 
     public static String getFileBaseFromName(String name) {
         String base = name;
-        if (!TextUtils.isEmpty(name)) {
+        if (TextUtils.isNotEmpty(name)) {
             int index = name.lastIndexOf(".");
             if (index != -1) {
                 base = name.substring(0, index);
@@ -64,7 +64,7 @@ public class FilesHelper {
 
     public static String getFileName(String path) {
         String name = path;
-        if (!TextUtils.isEmpty(path)) {
+        if (TextUtils.isNotEmpty(path)) {
             int index = path.lastIndexOf("/");
             if (index != -1) {
                 name = name.substring(index + 1);
@@ -75,7 +75,7 @@ public class FilesHelper {
 
     public static String getFileExtensionFromPath(String path) {
         String suffix = "";
-        if (!TextUtils.isEmpty(path)) {
+        if (TextUtils.isNotEmpty(path)) {
             int index = path.lastIndexOf(".");
             if (index != -1) {
                 suffix = path.substring(index + 1);

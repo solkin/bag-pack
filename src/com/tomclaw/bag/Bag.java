@@ -7,6 +7,7 @@ import java.util.List;
  * Simplest more to one file storage.
  * Created by solkin on 12/05/16.
  */
+@SuppressWarnings({"WeakerAccess", "unused"})
 public class Bag {
 
     private static final int BUFFER_SIZE = 102400;
@@ -25,6 +26,7 @@ public class Bag {
         pack(rootPath, files, false, callback);
     }
 
+    @SuppressWarnings("TryFinallyCanBeTryWithResources")
     public void write(DataOutputStream output, String path, long length, InputStream input) throws IOException {
         output.writeUTF(path);
         output.writeLong(length);
@@ -48,6 +50,7 @@ public class Bag {
         }
     }
 
+    @SuppressWarnings("ResultOfMethodCallIgnored")
     public void pack(String rootPath, List<File> files, boolean append, BagProgressCallback callback) throws IOException {
         DataOutputStream stream = null;
         int count = 0;
@@ -154,6 +157,7 @@ public class Bag {
         read(new FileInputStream(bagFile), callback);
     }
 
+    @SuppressWarnings("TryFinallyCanBeTryWithResources")
     private void read(InputStream inputStream, BagCallback callback) throws IOException {
         DataInputStream stream = null;
         try {
@@ -186,6 +190,7 @@ public class Bag {
         }
     }
 
+    @SuppressWarnings("StatementWithEmptyBody")
     private static void skipStream(long length, InputStream stream) throws IOException {
         long skipped = 0;
         if (length == 0) {
@@ -194,6 +199,7 @@ public class Bag {
         while ((skipped += stream.skip(length - skipped)) < length) ;
     }
 
+    @SuppressWarnings({"ResultOfMethodCallIgnored", "TryFinallyCanBeTryWithResources"})
     private void saveFile(File file, long length, InputStream stream) throws IOException {
         if (file.exists()) {
             file.delete();

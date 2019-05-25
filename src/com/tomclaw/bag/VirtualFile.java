@@ -5,6 +5,7 @@ import java.io.File;
 /**
  * Created by solkin on 16/05/16.
  */
+@SuppressWarnings("WeakerAccess")
 public class VirtualFile extends File {
 
     private String path;

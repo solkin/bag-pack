@@ -3,6 +3,7 @@ package com.tomclaw.bag;
 /**
  * Created by solkin on 18/05/16.
  */
+@SuppressWarnings("WeakerAccess")
 public class BagFile {
 
     private final String path;

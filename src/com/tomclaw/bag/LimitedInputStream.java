@@ -28,6 +28,7 @@ import java.io.InputStream;
  * @author Stephen Ostermiller http://ostermiller.org/contact.pl?regarding=Java+Utilities
  * @since ostermillerutils 1.04.00
  */
+@SuppressWarnings("WeakerAccess")
 public class LimitedInputStream extends InputStream {
 
     /**
