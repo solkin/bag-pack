@@ -98,7 +98,7 @@ public class MainForm {
                     String name = e.getPath().getPathComponent(c).toString();
                     node = node.get(name);
                 }
-                updateSelectedNode(node);
+                if (node != null) updateSelectedNode(node);
             }
         });
 
