@@ -380,6 +380,7 @@ public class MainForm {
         return new FileListModel(files);
     }
 
+    @SuppressWarnings("ResultOfMethodCallIgnored")
     private void unpack(final Node node) {
         WebDirectoryChooser directoryChooser = new WebDirectoryChooser(frame.getOwner(), "Choose directory to unpack");
         directoryChooser.setVisible(true);
