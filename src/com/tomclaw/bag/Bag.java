@@ -3,6 +3,8 @@ package com.tomclaw.bag;
 import java.io.*;
 import java.util.List;
 
+import static com.tomclaw.bag.StreamUtils.safeClose;
+
 /**
  * Simplest more to one file storage.
  * Created by solkin on 12/05/16.
@@ -41,12 +43,7 @@ public class Bag {
             System.out.println(path);
             throw ex;
         } finally {
-            if (inputStream != null) {
-                try {
-                    inputStream.close();
-                } catch (IOException ignored) {
-                }
-            }
+            safeClose(inputStream);
         }
     }
 
@@ -72,12 +69,7 @@ public class Bag {
                 callback.onProgress(count * 100 / files.size());
             }
         } finally {
-            if (stream != null) {
-                try {
-                    stream.close();
-                } catch (IOException ignored) {
-                }
-            }
+            safeClose(stream);
         }
         System.out.println(count + " files, " + size + " bytes total size");
     }
@@ -181,21 +173,16 @@ public class Bag {
                 }
             } while (!eof);
         } finally {
-            if (stream != null) {
-                try {
-                    stream.close();
-                } catch (IOException ignored) {
-                }
-            }
+            safeClose(stream);
         }
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
     private static void skipStream(long length, InputStream stream) throws IOException {
-        long skipped = 0;
         if (length == 0) {
             return;
         }
+        long skipped = 0;
         while ((skipped += stream.skip(length - skipped)) < length) ;
     }
 
@@ -214,12 +201,7 @@ public class Bag {
                 outputStream.write(buffer, 0, read);
             }
         } finally {
-            if (outputStream != null) {
-                try {
-                    outputStream.close();
-                } catch (IOException ignored) {
-                }
-            }
+            safeClose(outputStream);
         }
     }
 
