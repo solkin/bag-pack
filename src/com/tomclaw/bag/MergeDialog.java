@@ -10,6 +10,8 @@ import java.awt.event.*;
 import java.io.*;
 import java.util.*;
 
+import static com.tomclaw.bag.StreamUtils.safeClose;
+
 public class MergeDialog extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
@@ -159,12 +161,7 @@ public class MergeDialog extends JDialog {
                                 output.write(buffer, 0, read);
                             }
                         } finally {
-                            if (input != null) {
-                                try {
-                                    input.close();
-                                } catch (IOException ignored) {
-                                }
-                            }
+                            safeClose(input);
                         }
                         index++;
                         SwingUtilities.invokeLater(new Runnable() {
@@ -184,12 +181,7 @@ public class MergeDialog extends JDialog {
                 } catch (Throwable ex) {
                     ex.printStackTrace();
                 } finally {
-                    if (output != null) {
-                        try {
-                            output.close();
-                        } catch (IOException ignored) {
-                        }
-                    }
+                    safeClose(output);
                 }
             }
         }.start();
