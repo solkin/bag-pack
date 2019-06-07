@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d668afb-509f-411f-82d1-4042f3a7625b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/tomclaw/bag/MergeDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tomclaw/bag/MergeDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tomclaw/bag/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tomclaw/bag/Node.java" afterDir="false" />
     </list>
     <ignored path="bag-pack.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/MergeDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="182" column="27" lean-forward="true" selection-start-line="182" selection-start-column="27" selection-end-line="182" selection-end-column="27" />
+            <state relative-caret-position="187">
+              <caret line="184" column="17" lean-forward="true" selection-start-line="184" selection-start-column="17" selection-end-line="184" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -84,6 +84,18 @@
                 <element signature="e#8008#8009#0" expanded="true" />
                 <element signature="e#8040#8041#0" expanded="true" />
                 <element signature="e#8070#8071#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/Node.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="173" column="61" selection-start-line="173" selection-start-column="61" selection-end-line="173" selection-end-column="61" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -151,15 +163,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/Pair.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/TextUtils.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
@@ -219,7 +222,6 @@
         <option value="$PROJECT_DIR$/src/com/tomclaw/bag/SplitDialog.java" />
         <option value="$PROJECT_DIR$/src/com/tomclaw/bag/Main.java" />
         <option value="$PROJECT_DIR$/src/com/tomclaw/bag/Pair.java" />
-        <option value="$PROJECT_DIR$/src/com/tomclaw/bag/Node.java" />
         <option value="$PROJECT_DIR$/src/com/tomclaw/bag/TextUtils.java" />
         <option value="$PROJECT_DIR$/src/com/tomclaw/bag/VirtualFile.java" />
         <option value="$PROJECT_DIR$/src/com/tomclaw/bag/LimitedInputStream.java" />
@@ -228,6 +230,7 @@
         <option value="$PROJECT_DIR$/src/com/tomclaw/bag/StreamUtils.java" />
         <option value="$PROJECT_DIR$/src/com/tomclaw/bag/Bag.java" />
         <option value="$PROJECT_DIR$/src/com/tomclaw/bag/MergeDialog.java" />
+        <option value="$PROJECT_DIR$/src/com/tomclaw/bag/Node.java" />
       </list>
     </option>
   </component>
@@ -695,16 +698,6 @@
     <entry file="file://$PROJECT_DIR$/src/res/append.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3720">
-          <caret line="271" column="9" selection-start-line="271" selection-start-column="9" selection-end-line="271" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/Pair.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -830,8 +823,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/MergeDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="182" column="27" lean-forward="true" selection-start-line="182" selection-start-column="27" selection-end-line="182" selection-end-column="27" />
+        <state relative-caret-position="187">
+          <caret line="184" column="17" lean-forward="true" selection-start-line="184" selection-start-column="17" selection-end-line="184" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="173" column="61" selection-start-line="173" selection-start-column="61" selection-end-line="173" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

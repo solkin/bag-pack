@@ -3,6 +3,8 @@ package com.tomclaw.bag;
 import java.io.*;
 import java.util.*;
 
+import static com.tomclaw.bag.StreamUtils.safeClose;
+
 /**
  * Created by solkin on 15/05/16.
  */
@@ -170,7 +172,6 @@ public class Node extends HashMap<String, Node> {
                 appended += read;
             }
             raf.getChannel().truncate(descriptor + appended);
-            raf.close();
 
             parent.remove(getName());
             final long delta = bagFile.getInternal();
@@ -187,18 +188,8 @@ public class Node extends HashMap<String, Node> {
                 }
             });
         } finally {
-            if (stream != null) {
-                try {
-                    stream.close();
-                } catch (IOException ignored) {
-                }
-            }
-            if (raf != null) {
-                try {
-                    raf.close();
-                } catch (IOException ignored) {
-                }
-            }
+            safeClose(stream);
+            safeClose(raf);
         }
     }
 
