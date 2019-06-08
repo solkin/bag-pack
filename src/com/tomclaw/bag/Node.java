@@ -236,12 +236,7 @@ public class Node extends HashMap<String, Node> {
                 }
             } while (!eof);
         } finally {
-            if (stream != null) {
-                try {
-                    stream.close();
-                } catch (IOException ignored) {
-                }
-            }
+            safeClose(stream);
         }
     }
 
@@ -264,7 +259,7 @@ public class Node extends HashMap<String, Node> {
         while ((skipped += stream.skip(length - skipped)) < length) ;
     }
 
-    @SuppressWarnings({"TryFinallyCanBeTryWithResources", "ResultOfMethodCallIgnored"})
+    @SuppressWarnings({"ResultOfMethodCallIgnored"})
     public static void saveFile(File file, InputStream stream) throws IOException {
         if (file.exists()) {
             file.delete();
@@ -279,12 +274,7 @@ public class Node extends HashMap<String, Node> {
                 outputStream.write(buffer, 0, read);
             }
         } finally {
-            if (outputStream != null) {
-                try {
-                    outputStream.close();
-                } catch (IOException ignored) {
-                }
-            }
+            safeClose(outputStream);
         }
     }
 
