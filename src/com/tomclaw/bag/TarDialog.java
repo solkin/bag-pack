@@ -10,6 +10,8 @@ import java.nio.file.Files;
 import java.nio.file.attribute.FileOwnerAttributeView;
 import java.nio.file.attribute.UserPrincipal;
 
+import static com.tomclaw.bag.StreamUtils.safeClose;
+
 public class TarDialog extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
@@ -164,12 +166,7 @@ public class TarDialog extends JDialog {
                             } catch (IOException e) {
                                 e.printStackTrace();
                             } finally {
-                                if (input != null) {
-                                    try {
-                                        input.close();
-                                    } catch (IOException ignored) {
-                                    }
-                                }
+                                safeClose(input);
                             }
                             index++;
                             SwingUtilities.invokeLater(new Runnable() {
@@ -202,12 +199,7 @@ public class TarDialog extends JDialog {
                 } catch (IOException e) {
                     e.printStackTrace();
                 } finally {
-                    if (output != null) {
-                        try {
-                            output.close();
-                        } catch (IOException ignored) {
-                        }
-                    }
+                    safeClose(output);
                 }
             }
         }.start();

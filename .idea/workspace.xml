@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d668afb-509f-411f-82d1-4042f3a7625b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/tomclaw/bag/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tomclaw/bag/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tomclaw/bag/TarDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tomclaw/bag/TarDialog.java" afterDir="false" />
     </list>
     <ignored path="bag-pack.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="261" column="52" lean-forward="true" selection-start-line="261" selection-start-column="52" selection-end-line="261" selection-end-column="52" />
+            <state relative-caret-position="172">
+              <caret line="272" column="56" lean-forward="true" selection-start-line="272" selection-start-column="56" selection-end-line="272" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#8150#8198#0" expanded="true" />
@@ -103,13 +103,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/StreamUtils.java">
+        <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/SplitDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="52" lean-forward="true" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
+            <state relative-caret-position="196">
+              <caret line="112" column="38" selection-start-line="112" selection-start-column="38" selection-end-line="112" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/StreamUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/TarDialog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="157">
+              <caret line="201" column="36" selection-start-line="201" selection-start-column="36" selection-end-line="201" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -163,27 +184,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/TextUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
-              <folding>
-                <element signature="e#232#233#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/VirtualFile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -217,7 +217,6 @@
         <option value="$PROJECT_DIR$/src/com/tomclaw/bag/MergeDialog.form" />
         <option value="$PROJECT_DIR$/src/com/tomclaw/bag/SplitDialog.form" />
         <option value="$PROJECT_DIR$/src/com/tomclaw/bag/FilesHelper.java" />
-        <option value="$PROJECT_DIR$/src/com/tomclaw/bag/TarDialog.java" />
         <option value="$PROJECT_DIR$/src/com/tomclaw/bag/TarDialog.form" />
         <option value="$PROJECT_DIR$/src/com/tomclaw/bag/PackDialog.java" />
         <option value="$PROJECT_DIR$/src/com/tomclaw/bag/SplitDialog.java" />
@@ -232,6 +231,7 @@
         <option value="$PROJECT_DIR$/src/com/tomclaw/bag/Bag.java" />
         <option value="$PROJECT_DIR$/src/com/tomclaw/bag/MergeDialog.java" />
         <option value="$PROJECT_DIR$/src/com/tomclaw/bag/Node.java" />
+        <option value="$PROJECT_DIR$/src/com/tomclaw/bag/TarDialog.java" />
       </list>
     </option>
   </component>
@@ -637,13 +637,6 @@
       <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/TarDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="315" column="22" selection-start-line="315" selection-start-column="22" selection-end-line="315" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/PackDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -668,13 +661,6 @@
             <element signature="e#5879#5880#0" expanded="true" />
             <element signature="e#6006#6007#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/SplitDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -790,16 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/StreamUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="52" lean-forward="true" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/Bag.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
@@ -831,12 +807,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="261" column="52" lean-forward="true" selection-start-line="261" selection-start-column="52" selection-end-line="261" selection-end-column="52" />
+        <state relative-caret-position="172">
+          <caret line="272" column="56" lean-forward="true" selection-start-line="272" selection-start-column="56" selection-end-line="272" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#8150#8198#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/SplitDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="112" column="38" selection-start-line="112" selection-start-column="38" selection-end-line="112" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/StreamUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tomclaw/bag/TarDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="201" column="36" selection-start-line="201" selection-start-column="36" selection-end-line="201" selection-end-column="36" />
         </state>
       </provider>
     </entry>
