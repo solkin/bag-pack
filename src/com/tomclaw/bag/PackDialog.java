@@ -12,6 +12,8 @@ import java.io.FilenameFilter;
 import java.io.IOException;
 import java.util.List;
 
+import static javax.swing.SwingUtilities.invokeLater;
+
 public class PackDialog extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
@@ -140,7 +142,7 @@ public class PackDialog extends JDialog {
                     bag.pack(directoryPath, files, new Bag.BagProgressCallback() {
                         @Override
                         public void onProgress(final int percent) {
-                            SwingUtilities.invokeLater(new Runnable() {
+                            invokeLater(new Runnable() {
                                 @Override
                                 public void run() {
                                     progressDialog.setProgress(percent);
@@ -148,7 +150,7 @@ public class PackDialog extends JDialog {
                             });
                         }
                     });
-                    SwingUtilities.invokeLater(new Runnable() {
+                    invokeLater(new Runnable() {
                         @Override
                         public void run() {
                             progressDialog.dispose();

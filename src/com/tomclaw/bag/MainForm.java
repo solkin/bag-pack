@@ -37,6 +37,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 
+import static javax.swing.SwingUtilities.invokeLater;
+
 /**
  * Created by solkin on 15/05/16.
  * Bag packer main frame.
@@ -319,7 +321,7 @@ public class MainForm {
             public void run() {
                 try {
                     tree = Node.scan(file);
-                    SwingUtilities.invokeLater(new Runnable() {
+                    invokeLater(new Runnable() {
                         @Override
                         public void run() {
                             setTree(tree);
@@ -418,7 +420,7 @@ public class MainForm {
                         public void onPath(String path) {
                         }
                     });
-                    SwingUtilities.invokeLater(new Runnable() {
+                    invokeLater(new Runnable() {
                         @Override
                         public void run() {
                             progressDialog.dispose();
@@ -435,7 +437,7 @@ public class MainForm {
             public void run() {
                 try {
                     node.delete();
-                    SwingUtilities.invokeLater(new Runnable() {
+                    invokeLater(new Runnable() {
                         @Override
                         public void run() {
                             setTree(tree);

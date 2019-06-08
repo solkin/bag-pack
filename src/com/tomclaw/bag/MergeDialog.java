@@ -11,6 +11,7 @@ import java.io.*;
 import java.util.*;
 
 import static com.tomclaw.bag.StreamUtils.safeClose;
+import static javax.swing.SwingUtilities.invokeLater;
 
 public class MergeDialog extends JDialog {
     private JPanel contentPane;
@@ -164,7 +165,7 @@ public class MergeDialog extends JDialog {
                             safeClose(input);
                         }
                         index++;
-                        SwingUtilities.invokeLater(new Runnable() {
+                        invokeLater(new Runnable() {
                             @Override
                             public void run() {
                                 progressDialog.setProgress(100 * index / volumes.size());
@@ -172,7 +173,7 @@ public class MergeDialog extends JDialog {
                         });
                     }
                     output.flush();
-                    SwingUtilities.invokeLater(new Runnable() {
+                    invokeLater(new Runnable() {
                         @Override
                         public void run() {
                             progressDialog.dispose();

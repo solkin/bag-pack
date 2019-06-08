@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import static javax.swing.SwingUtilities.invokeLater;
+
 public class SplitDialog extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
@@ -133,7 +135,7 @@ public class SplitDialog extends JDialog {
                                 bag.write(output, new File(path, node.getName()).getAbsolutePath(), node.getLength(), node.getInputStream());
                                 total += node.getLength();
                                 fileNo++;
-                                SwingUtilities.invokeLater(new Runnable() {
+                                invokeLater(new Runnable() {
                                     @Override
                                     public void run() {
                                         progressDialog.setProgress(100 * fileNo / files.get());
@@ -148,7 +150,7 @@ public class SplitDialog extends JDialog {
                         public void onPath(String path) {
                         }
                     });
-                    SwingUtilities.invokeLater(new Runnable() {
+                    invokeLater(new Runnable() {
                         @Override
                         public void run() {
                             progressDialog.dispose();

@@ -11,6 +11,7 @@ import java.nio.file.attribute.FileOwnerAttributeView;
 import java.nio.file.attribute.UserPrincipal;
 
 import static com.tomclaw.bag.StreamUtils.safeClose;
+import static javax.swing.SwingUtilities.invokeLater;
 
 public class TarDialog extends JDialog {
     private JPanel contentPane;
@@ -169,7 +170,7 @@ public class TarDialog extends JDialog {
                                 safeClose(input);
                             }
                             index++;
-                            SwingUtilities.invokeLater(new Runnable() {
+                            invokeLater(new Runnable() {
                                 @Override
                                 public void run() {
                                     progressDialog.setProgress(100 * index / total);
@@ -190,7 +191,7 @@ public class TarDialog extends JDialog {
                         }
                     });
                     writeTrail(sumSize, output);
-                    SwingUtilities.invokeLater(new Runnable() {
+                    invokeLater(new Runnable() {
                         @Override
                         public void run() {
                             progressDialog.dispose();
