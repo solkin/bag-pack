@@ -22,7 +22,7 @@ public class TarDialog extends JDialog {
     private JButton bagSelectButton;
     private JButton tarSelectButton;
 
-    public TarDialog() {
+    TarDialog() {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
@@ -180,7 +180,7 @@ public class TarDialog extends JDialog {
 
                         @Override
                         public void onPath(String path) {
-                            String noRootPath = path.substring(rootNode.getName().length() + 1, path.length());
+                            String noRootPath = path.substring(rootNode.getName().length() + 1);
                             if (noRootPath.length() > 1) {
                                 try {
                                     sumSize += writeTarFile(noRootPath, 0, ownerName, null, output);
@@ -206,15 +206,15 @@ public class TarDialog extends JDialog {
         }.start();
     }
 
-    public static void writeTarString(OutputStream output, String string) throws IOException {
+    private static void writeTarString(OutputStream output, String string) throws IOException {
         writeTarString(output, string, true);
     }
 
-    public static void writeTarString(OutputStream output, String string, boolean zeroTrim) throws IOException {
+    private static void writeTarString(OutputStream output, String string, boolean zeroTrim) throws IOException {
         writeTarBytes(output, string.getBytes(), zeroTrim);
     }
 
-    public static void writeTarBytes(OutputStream output, byte[] data, boolean zeroTrim) throws IOException {
+    private static void writeTarBytes(OutputStream output, byte[] data, boolean zeroTrim) throws IOException {
         output.write(data);
         output.write(' ');
         if (zeroTrim) {
@@ -222,7 +222,7 @@ public class TarDialog extends JDialog {
         }
     }
 
-    public static long writeTarFile(String filePath, long fileSize, String owner, InputStream input, OutputStream output) throws IOException {
+    private static long writeTarFile(String filePath, long fileSize, String owner, InputStream input, OutputStream output) throws IOException {
         int type = 0;
         String fileMode = "000644";
         if (input == null) {
@@ -347,7 +347,7 @@ public class TarDialog extends JDialog {
         return sumSize;
     }
 
-    public static void writeTrail(long sumSize, OutputStream output) throws IOException {
+    private static void writeTrail(long sumSize, OutputStream output) throws IOException {
         // Postfix.
         int quantity = 512 * 20;
         if (sumSize % quantity != 0) {
